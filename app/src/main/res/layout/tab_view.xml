@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/tabicon"
+        android:layout_width="@dimen/_11sdp"
+        android:layout_height="@dimen/_11sdp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_noti"
+        />
+
+    <RelativeLayout
+        android:id="@+id/tabcircle"
+        android:layout_width="@dimen/_12sdp"
+        android:layout_height="@dimen/_12sdp"
+        android:background="@drawable/circel_shape"
+        android:layout_below="@+id/tabicon"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/colorAccent"
+        >
+        <TextView
+            android:id="@+id/tabnoti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="1"
+            android:textColor="@color/white"
+            android:fontFamily="@font/flor"
+            android:textStyle="bold"
+            android:textSize="@dimen/_8sdp"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

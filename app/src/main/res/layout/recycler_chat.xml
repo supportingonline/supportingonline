@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_5sdp"
+    >
+
+    <TextView
+        android:id="@+id/r_chat_other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:background="@drawable/recchat1"
+        android:textSize="@dimen/_12sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingRight="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:paddingLeft="@dimen/_8sdp"
+        android:layout_alignParentLeft="true"
+        />
+    <TextView
+        android:id="@+id/r_chat_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:background="@drawable/recchat2"
+        android:backgroundTint="@color/holoww"
+        android:textSize="@dimen/_12sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingRight="@dimen/_8sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:paddingLeft="@dimen/_15sdp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/black"
+        />
+
+</RelativeLayout>

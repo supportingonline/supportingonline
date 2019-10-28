@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr"
+    android:weightSum="5.04"
+
+    >
+
+    <TextView
+        android:id="@+id/r_payment_accountNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:text="123345"
+        android:textAlignment="center"
+        android:paddingVertical="@dimen/_5sdp"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.01"
+        android:background="@color/gray"
+        android:layout_marginHorizontal="@dimen/_1sdp"
+        />
+
+    <TextView
+        android:id="@+id/r_payment_bankName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:paddingVertical="@dimen/_5sdp"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.01"
+        android:background="@color/gray"
+        android:layout_marginHorizontal="@dimen/_1sdp"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:paddingVertical="@dimen/_5sdp"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/r_payment_logo"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_centerInParent="true"
+
+            />
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.01"
+        android:background="@color/gray"
+        android:layout_marginHorizontal="@dimen/_1sdp"
+        />
+
+    <TextView
+        android:id="@+id/r_payment_country"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:text="123345"
+        android:textAlignment="center"
+        android:paddingVertical="@dimen/_5sdp"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.01"
+        android:background="@color/gray"
+        android:layout_marginHorizontal="@dimen/_1sdp"
+        />
+
+    <TextView
+        android:id="@+id/r_payment_currency"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:text="123345"
+        android:textAlignment="center"
+        android:paddingVertical="@dimen/_5sdp"
+        />
+
+</LinearLayout>

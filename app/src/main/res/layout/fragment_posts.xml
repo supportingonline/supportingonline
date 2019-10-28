@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".PostsFragment"
+    android:paddingBottom="@dimen/_5sdp"
+    >
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/posts_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:nestedScrollingEnabled="false"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:id="@+id/recycler_posts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           />
+
+        <ProgressBar
+
+            android:id="@+id/posts_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/_2sdp"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_gravity="center"
+
+            />
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

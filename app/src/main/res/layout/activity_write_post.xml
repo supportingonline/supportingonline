@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WritePostActivity"
+
+    android:padding="@dimen/_3sdp"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/_5sdp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/write_imagelayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:background="@drawable/rectangle_stroke_transparent"
+            android:visibility="gone"
+
+            >
+
+            <ImageView
+                android:id="@+id/write_imagecancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_cancel"
+                android:tint="@color/colorAccent"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/_5sdp"/>
+            <ImageView
+                android:layout_margin="@dimen/_5sdp"
+                android:id="@+id/write_image"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_90sdp"
+                android:src="@drawable/towusers"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+
+
+
+
+
+    <EditText
+        android:id="@+id/write_edit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:hint="@string/write_post"
+        android:fontFamily="@font/flor"
+        android:padding="@dimen/_5sdp"
+        android:background="@drawable/rectangle_stroke_edite"
+        android:transitionName="trans"
+        android:textAlignment="viewStart"
+        android:layoutDirection="ltr"
+        android:maxLines="3"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layoutDirection="ltr"
+        android:padding="@dimen/_8sdp"
+        >
+
+        <ImageView
+            android:id="@+id/write_capture"
+            android:layout_width="@dimen/_17sdp"
+            android:layout_height="@dimen/_17sdp"
+            android:src="@drawable/ic_gallery"
+            />
+        <ImageView
+            android:id="@+id/write_emoji"
+            android:layout_width="@dimen/_17sdp"
+            android:layout_height="@dimen/_17sdp"
+            android:src="@drawable/ic_emoji"
+            android:layout_marginLeft="@dimen/_20sdp"
+            />
+    </LinearLayout>
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/write_exp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:background="@color/white"
+            android:padding="@dimen/_5sdp"
+            >
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_emoji"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                />
+        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+    <Button
+        android:id="@+id/write_btnshare"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/share"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:fontFamily="@font/lato"
+        android:textSize="@dimen/_18sdp"
+        android:textAlignment="center"
+        android:paddingHorizontal="@dimen/_60sdp"
+        android:background="@drawable/rectangle1"
+        android:backgroundTint="@color/colorAccent"
+        android:drawableLeft="@drawable/ic_share"
+        android:drawableTint="@color/white"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:alpha="0.5"
+
+        />
+
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

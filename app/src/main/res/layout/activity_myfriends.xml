@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyfriendsActivity"
+    android:orientation="vertical"
+    >
+
+    <EditText
+        android:id="@+id/myfriends_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_filter"
+        android:background="@drawable/rectangle_stroke_edite"
+        android:drawableTint="@color/gray"
+        android:padding="@dimen/_5sdp"
+        android:hint="@string/filter"
+        android:drawablePadding="@dimen/_10sdp"
+        android:transitionName="trans"
+        android:textStyle="italic"
+        android:textAlignment="viewStart"
+        android:layoutDirection="ltr"
+        android:singleLine="true"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:id="@+id/recycler_myfriends"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"/>
+
+</LinearLayout>

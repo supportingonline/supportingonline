@@ -1,0 +1,229 @@
+<resources>
+    <string name="app_name">supportingonline</string>
+    <string name="title">SupportingOnline</string>
+
+    <!--api-->
+
+    <string name="domain" translatable="false">https://www.supportingonline.com/</string>
+    <string name="socket" translatable="false">https://app-47fa2b09-17da-49a5-8b69-e6782bc98fb7.cleverapps.io/</string>
+    <string name="google_client_id_">584723212180-0o0a68kj6tia0vg42d9gfju8lc08959l.apps.googleusercontent.com</string>
+    <string name="google_client_id">65830180157-2gbulaajaoi5fph05o8qpdahtdqnbqs7.apps.googleusercontent.com</string>
+    <string name="twitter_consumer_key" translatable="false">fJZhFeZ16PXNVnfA0Hny4aiUO</string>
+    <string name="twitter_consumer_secret" translatable="false">COW60lo9r29MqbgAHqwnSECHtCRgWsR0dXd0sAmldNyOLQ7uGH</string>
+    <string name="facebook_app_id" translatable="false">2328430343902835</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb2328430343902835</string>
+
+    <!--titles-->
+
+    <string name="signin_google">Sign In Google</string>
+    <string name="loading">Loading</string>
+    <string name="supporting_title">supporting</string>
+    <string name="my_profile">My Profile</string>
+    <string name="my_friends">My Friends</string>
+    <string name="languages">Languages</string>
+    <string name="search">search</string>
+    <string name="write_post">Write Post</string>
+    <string name="share">Share</string>
+    <string name="wow">Wow</string>
+    <string name="comment">Comment</string>
+    <string name="your_comment">Your Comment</string>
+    <string name="logout">Logout</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="surelogout">are you sure to logout from your account</string>
+    <string name="no">no</string>
+    <string name="yes">yes</string>
+    <string name="fees_wallet">Fees Wallet</string>
+    <string name="charge_fees_wallet_by_code">Charge Fees Wallet By Code</string>
+    <string name="get">Get</string>
+    <string name="profile">Profile</string>
+    <string name="chat">Chat</string>
+    <string name="your_message">Your Message</string>
+    <string name="bronze">Bronze</string>
+    <string name="silver">Silver</string>
+    <string name="gold">Gold</string>
+    <string name="bronze2_det">Start To get x2</string>
+    <string name="silver2_det">Start To get x4</string>
+    <string name="gold2_det">Start To get x8</string>
+    <string name="bronze3_det">Start To get x3</string>
+    <string name="silver3_det">Start To get x9</string>
+    <string name="gold3_det">Start To get x27</string>
+    <string name="selectoneof">Select One Of This Options</string>
+    <string name="select_language">Select Language</string>
+    <string name="aboutus">About Us</string>
+    <string name="filter">Filter</string>
+    <string name="confirm_data">Confirm Data</string>
+    <string name="your_full_name">Your Full Name</string>
+    <string name="your_owen_email">Your Owen Email</string>
+    <string name="your_owen_phone">Your Owen Phone</string>
+    <string name="price_of_the_model">Price Of The Model</string>
+    <string name="promo_code">Promo Code(Optional)</string>
+    <string name="confirm">Confirm</string>
+    <string name="accept">Accept</string>
+    <string name="cancel">Cancel</string>
+    <string name="join_group_by_code">Join Group By Code</string>
+    <string name="join">Join</string>
+    <string name="this_is_your_support_groups">This Is Your Support Groups</string>
+    <string name="follow">Follow</string>
+    <string name="send_message">Send Message</string>
+    <string name="add_friend">Add Friend</string>
+    <string name="block">Block</string>
+    <string name="remove_friend">Remove Friend</string>
+    <string name="unfollow">Unflollow</string>
+    <string name="pay_fees_now">Pay Fees Now</string>
+    <string name="send_the_money">Send The Money</string>
+    <string name="copy">Copy</string>
+    <string name="posts">Posts</string>
+    <string name="photos">Photos</string>
+    <string name="friends">Friends</string>
+
+
+    <string-array name="prices">
+        <item>25</item>
+        <item>50</item>
+        <item>75</item>
+        <item>100</item>
+    </string-array>
+
+    <string-array name="banks_name">
+        <item>EMIRATES ISLAMIC</item>
+    </string-array>
+
+
+    <string name="title_activity_other_profile_scrolling">OtherProfileScrollingActivity</string>
+    <string name="setting">Setting</string>
+    <string name="name">Name</string>
+    <string name="image">Image</string>
+    <string name="price">Price</string>
+    <string name="copied">copied</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="about">About</string>
+    <string name="education">Education</string>
+    <string name="location">Location</string>
+    <string name="submit">Submit</string>
+    <string name="money">Money</string>
+    <string name="type">Type</string>
+    <string name="date">Date</string>
+    <string name="statement_of_account">Statement Of Account</string>
+    <string name="payments_options">payments Options</string>
+    <string name="account_number">Account Number</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="logo">Logo</string>
+    <string name="country">Country</string>
+    <string name="currency">Currency</string>
+    <string name="payment_number">Payment Number</string>
+    <string name="notvaildcode">Not Valid Code</string>
+    <string name="successcode">success code your wallet (</string>
+    <string name="stillgoing">Still Going</string>
+    <string name="waiting_for_accept">Waiting For Accept</string>
+    <string name="unBlock">Remove Block</string>
+    <string name="remove">Remove</string>
+    <string name="show_receive_image">Show Receive Image</string>
+    <string name="work_with_us">Work With Us</string>
+    <string name="to_show_yor_link">To Show Your Link : You Should To Send The Money To Your Friend And Pay The Fees.</string>
+    <string name="joined_at">Join At:</string>
+    <string name="my_coworker">My Coworker</string>
+    <string name="read_more">Read More About</string>
+    <string name="upload">Upload</string>
+    <string name="skip">Skip</string>
+    <string name="mutualfrirends">Mutual Friends</string>
+    <string name="people_you_may_know">People You May Know</string>
+    <string name="i_receive">I receive</string>
+    <string name="delete">Delete</string>
+    <string name="no_data">No data</string>
+    <string name="loading_you_groups">Loading Your Groups</string>
+    <string name="watch_video">Watch Video</string>
+    <string name="friendrequset">New Friend Request From </string>
+    <string name="chatfriends">Chat Friends</string>
+    <string name="version">Version</string>
+    <string name="sharetheapp">Share App</string>
+    <string name="successsend">Your payment has been sent</string>
+    <string name="contactus">Contact Us</string>
+
+    <string name="contactinfo">This website is owned by Refaat Makram portal and is managed by it.\n\n
+
+    Refaat Makram portal\n
+    Office 102, Sunlight Building, Fish Roundabout, Deira, Dubai, United Arab Emirates\n
+    T / 0097143343415, P.O.BOX 384849\n
+    refaatmp@eim.ae \n\n
+        Thank you for being a part of the Supporting Online community.\n
+
+        If you have any questions, please feel free to reach out to us at  <font color='#01C6DB'>supportingonline@gmail.com</font>  \n\n
+
+Sincerely,
+The Supporting Online Team
+
+    </string>
+
+    <string-array name="models_about">
+        <item>•You get double the model’s price directly from the two supportive friends (first generation)\n
+              •You Permanently exit the model after getting double the model’s price from the two friends.\n
+              •You can join again by paying model’s price to the friend who you should pay for.\n\n
+
+            •The fees amounts are directly sent between friends separately outside the site.\n
+            •The friends are dealing by their national currency, by a   fixed measuring unit which is equivalent to dollars\n
+            •The model’s price is determined from 4 choices which are: 25 dollars, 50 dollars, 75 dollars, 100 dollars.\n
+            •By using the model, you agree on the policies, terms and conditions
+
+</item>
+
+
+        <item>•You get quadruple (4) the model’s price from the four supportive friends (second generation)\n
+              •You Permanently exit the model after getting quadruple the model’s price from the four friends.\n
+              •You can join again by paying model’s price to the friend who you should pay for.\n
+              •The fees amounts are directly sent between friends separately outside the site.\n
+              •The friends are dealing by their national currency, by a   fixed measuring unit which is equivalent to dollars .\n
+              •The model’s price is determined from 4 choices which are: 25 dollars, 50 dollars, 75 dollars, 100 dollars.\n
+              •By using the model, you agree on the policies, terms and conditions
+
+</item>
+
+        <item>⦁You get octuple (8) the model’s price from the eight supportive friends (third generation)\n
+              ⦁You Permanently exit the model after getting octuple the model’s price from the four friends.\n
+              ⦁You can join again by paying model’s price to the friend who you should pay for.\n
+              •The fees amounts are directly sent between friends separately outside the site\n
+              ⦁The friends are dealing by their national currency, by a   fixed measuring unit which is equivalent to dollars\n
+              ⦁The model’s price is determined from 4 choices which are: 25 dollars, 50 dollars, 75 dollars, 100 dollars.\n
+              ⦁By using the model, you agree on the policies, terms and conditions</item>
+
+
+        <item>•You get triple the model’s price directly from the three supportive friends (first generation)\n
+              •You Permanently exit the model after getting triple the model’s price from the three friends.\n
+              •You can join again by paying model’s price to the friend who you should pay for.\n
+              •The fees amounts are directly sent between friends separately outside the site.\n
+              •The friends are dealing by their national currency, by a   fixed measuring unit which is equivalent to dollars\n
+              •The model’s price is determined from 4 choices which are: 25 dollars, 50 dollars, 75 dollars, 100 dollars.\n
+              •By using the model, you agree on the policies, terms and conditions
+
+        </item>
+
+        <item>•You get nonuple (9) the model’s price from the four supportive friends (second generation)\n
+              •You Permanently exit the model after getting nonuple (9) the model’s price from the four friends.\n
+              •You can join again by paying model’s price to the friend who you should pay for.\n
+              •The fees amounts are directly sent between friends separately outside the site.\n
+              •The friends are dealing by their national currency, by a   fixed measuring unit which is equivalent to dollars\n
+              •The model’s price is determined from 4 choices which are: 25 dollars, 50 dollars, 75 dollars, 100 dollars.\n
+              •By using the model, you agree on the policies, terms and conditions
+        </item>
+
+        <item>•You get twenty-seven times the model’s price from the twenty-seven supportive friends (third generation)\n
+             •You Permanently exit the model after getting 27 times the model’s price from the twenty-seven friends.\n
+             •You can join again by paying model’s price to the friend who you should pay for.\n
+             •The fees amounts are directly sent between friends separately outside the site.\n
+             •The friends are dealing by their national currency, by a   fixed measuring unit which is equivalent to dollars.\n
+             •The model’s price is determined from 4 choices which are: 25 dollars, 50 dollars, 75 dollars, 100 dollars.\n
+             •By using the model, you agree on the policies, terms and conditions
+
+        </item>
+    </string-array>
+
+
+    <string-array name="model_names">
+        <item>Bronze 2</item>
+        <item>Silver 2</item>
+        <item>Gold 2</item>
+        <item>Bronze 3</item>
+        <item>Silver 3</item>
+        <item>Gold 3</item>
+    </string-array>
+</resources>

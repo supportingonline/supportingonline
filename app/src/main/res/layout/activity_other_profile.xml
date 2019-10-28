@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    tools:context=".OtherProfileActivity"
+
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@android:color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+
+            >
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white"
+               android:paddingBottom="@dimen/_10sdp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_90sdp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/other_timeline_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_90sdp"
+                        android:scaleType="fitXY"
+                        android:layout_centerInParent="true"
+                        />
+
+                </RelativeLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/other_profile_image"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                    app:civ_border_width="@dimen/_1sdp"
+                    app:civ_border_color="@color/colorPrimaryDark"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:id="@+id/other_profile_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="name"
+                    android:fontFamily="@font/lato"
+                    android:textColor="@color/black"
+                    android:textStyle="italic"
+                    android:textAlignment="center"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:id="@+id/recycler_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/other_layoutBTNS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:alpha="0.5"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    >
+
+
+
+                    <Button
+                        android:id="@+id/other_btn_follow"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_20sdp"
+                        android:background="@drawable/rectangle1"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:text="@string/follow"
+                        android:textSize="@dimen/_7sdp"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:layout_marginHorizontal="@dimen/_10sdp"/>
+                    <Button
+                        android:id="@+id/other_btn_messasge"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_20sdp"
+                        android:background="@drawable/rectangle1"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:text="@string/send_message"
+                        android:textSize="@dimen/_7sdp"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:layout_marginHorizontal="@dimen/_10sdp"/>
+                    <Button
+                        android:id="@+id/other_btn_friend"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_20sdp"
+                        android:background="@drawable/rectangle1"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:text="@string/add_friend"
+                        android:textSize="@dimen/_7sdp"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:layout_marginHorizontal="@dimen/_10sdp"/>
+                    <Button
+                        android:id="@+id/other_btn_block"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_20sdp"
+                        android:background="@drawable/rectangle1"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:text="@string/block"
+                        android:textSize="@dimen/_7sdp"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:layout_marginHorizontal="@dimen/_10sdp"/>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:id="@+id/recycler_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    />
+
+            </LinearLayout>
+
+
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        layout="@layout/content_other_profile"
+        />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

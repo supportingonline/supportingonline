@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SupportingMainFragment">
+
+
+
+
+
+    <androidx.core.widget.NestedScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark"
+        >
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+
+       >
+
+       <TextView
+           android:id="@+id/sup_wallet"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/fees_wallet"
+           android:textColor="@color/white"
+           android:fontFamily="@font/lato"
+           android:padding="@dimen/_10sdp"/>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/_25sdp"
+           android:orientation="horizontal"
+           android:layoutDirection="ltr"
+           android:weightSum="4"
+           android:layout_margin="@dimen/_5sdp"
+           android:background="@drawable/rectangle2"
+           android:backgroundTint="@color/colorPrimary"
+           >
+           <EditText
+               android:id="@+id/sup_edite_code"
+               android:layout_width="0dp"
+               android:layout_height="fill_parent"
+               android:layout_weight="3.2"
+               android:background="@drawable/rectangle1"
+               android:hint="@string/charge_fees_wallet_by_code"
+               android:padding="@dimen/_3sdp"
+               android:imeOptions="flagNoExtractUi"
+               android:textSize="@dimen/_10sdp"
+               android:inputType="textNoSuggestions"
+               />
+           <Button
+               android:id="@+id/sup_btn_code"
+               android:layout_width="0dp"
+               android:layout_height="fill_parent"
+               android:layout_weight="0.8"
+               android:background="@android:color/transparent"
+               android:backgroundTint="@color/blue"
+               android:text="@string/get"
+               android:textColor="@color/white"
+               android:textStyle="bold"
+               android:textAllCaps="false"
+               android:alpha="0.5"
+               />
+
+
+       </LinearLayout>
+
+       <!--first line-->
+
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="1dp"
+           android:background="@color/white"
+           android:layout_marginHorizontal="@dimen/_10sdp"
+           android:layout_marginVertical="@dimen/_10sdp"
+           android:alpha="0.5"
+           />
+
+
+       <TextView
+           android:id="@+id/sup_statofaccount"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="@string/statement_of_account"
+           android:textColor="@color/blue"
+           android:textAlignment="center"
+
+           android:textSize="@dimen/_15sdp"
+           />
+
+       <TextView
+           android:id="@+id/sup_payment"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="@string/payments_options"
+           android:textColor="@color/blue"
+           android:textAlignment="center"
+           android:layout_marginBottom="@dimen/_10sdp"
+           android:textSize="@dimen/_15sdp"
+           android:layout_marginTop="@dimen/_3sdp"
+           />
+
+       <Button
+           android:id="@+id/sup_work_btn"
+           android:layout_width="wrap_content"
+           android:layout_height="@dimen/_30sdp"
+           android:text="@string/work_with_us"
+           android:textAllCaps="false"
+           android:background="@drawable/rectangle1"
+           android:backgroundTint="@color/colorPrimary"
+           android:paddingHorizontal="@dimen/_15sdp"
+           android:layout_gravity="center"
+           android:layout_marginBottom="@dimen/_10sdp"
+           android:textColor="@color/white"
+           android:textSize="@dimen/_15sdp"
+           android:visibility="gone"
+           />
+
+
+
+
+       <LinearLayout
+
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/_25sdp"
+           android:orientation="horizontal"
+           android:layoutDirection="ltr"
+           android:weightSum="4"
+           android:layout_margin="@dimen/_5sdp"
+           android:background="@drawable/rectangle2"
+           android:backgroundTint="@color/colorAccent"
+           >
+           <EditText
+               android:id="@+id/sup_edite_group"
+               android:layout_width="0dp"
+               android:layout_height="fill_parent"
+               android:layout_weight="3.2"
+               android:background="@drawable/rectangle1"
+               android:hint="@string/join_group_by_code"
+               android:imeOptions="flagNoExtractUi"
+               android:textSize="@dimen/_10sdp"
+               android:padding="@dimen/_3sdp"
+               android:inputType="textNoSuggestions"
+               />
+           <Button
+               android:id="@+id/sup_btn_group"
+               android:layout_width="0dp"
+               android:layout_height="fill_parent"
+               android:layout_weight="0.8"
+               android:background="@android:color/transparent"
+               android:backgroundTint="@color/blue"
+               android:text="@string/join"
+               android:textColor="@color/white"
+               android:textStyle="bold"
+               android:textAllCaps="false"
+               android:alpha="0.5"
+               />
+
+
+       </LinearLayout>
+
+       <!--second line-->
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="1dp"
+           android:background="@color/white"
+           android:layout_marginHorizontal="@dimen/_10sdp"
+           android:layout_marginVertical="@dimen/_20sdp"
+           android:alpha="0.5"
+           />
+
+       <TextView
+           android:id="@+id/sup_supportingText"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textAlignment="center"
+           android:text="@string/this_is_your_support_groups"
+           android:textColor="@color/white"
+           android:fontFamily="@font/lato"/>
+
+       <ProgressBar
+           android:id="@+id/sup_btn_progress"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:indeterminate="true"
+           style="@android:style/Widget.Material.ProgressBar.Horizontal"
+
+           />
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/recycler_group_history"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:nestedScrollingEnabled="false"/>
+
+   </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

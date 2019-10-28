@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:orientation="vertical"
+    >
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/home_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:fitsSystemWindows="false"
+        tools:openDrawer="left"
+        style="@style/AppTheme2"
+
+        >
+
+        <include
+            layout="@layout/myhome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            android:paddingTop="@dimen/_20sdp"
+            android:background="@color/dark2"
+
+            >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+
+                >
+                <EditText
+                    android:id="@+id/home_edit_search"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle1"
+                    android:backgroundTint="@color/holoww"
+                    android:drawableLeft="@drawable/ic_search"
+                    android:padding="@dimen/_5sdp"
+                    android:hint="@string/search"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:textColorHint="@color/white_h"
+                    android:transitionName="trans"
+                    android:textStyle="italic"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:imeOptions="flagNoExtractUi"
+                    android:textAlignment="viewStart"
+                    android:layoutDirection="ltr"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_menu"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:divider="@color/white"
+                    android:background="@color/dark"
+                    android:dividerHeight="@dimen/_1sdp" />
+
+                <TextView
+                    android:id="@+id/home_vrsionname"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="V"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/flor"
+
+                    />
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layoutDirection="ltr"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_weight="1"
+                        android:src="@drawable/mastercard"
+                        />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_weight="1"
+                        android:src="@drawable/visa"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.navigation.NavigationView>
+
+
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</RelativeLayout>

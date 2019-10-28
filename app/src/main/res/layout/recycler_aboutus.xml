@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_5sdp"
+    android:background="@drawable/rectangle_stroke_transparent"
+    >
+
+    <TextView
+        android:id="@+id/r_aboutus_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/bronze"
+        android:textSize="@dimen/_15sdp"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/colorPrimary"
+        />
+    <TextView
+        android:id="@+id/r_aboutus_des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bronze"
+        android:textSize="@dimen/_13sdp"
+        android:padding="@dimen/_2sdp"
+        android:textStyle="italic"
+        />
+
+
+    <TextView
+        android:id="@+id/r_aboutus_watch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/watch_video"
+        android:textSize="@dimen/_12sdp"
+        android:fontFamily="@font/flor"
+        android:textColor="@color/colorAccent"
+        />
+
+</LinearLayout>

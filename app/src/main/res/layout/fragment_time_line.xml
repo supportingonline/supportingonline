@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".TimeLineFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/f_timeline_swipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            >
+
+
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/f_timeline_nested"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/_2sdp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layoutDirection="ltr"
+            android:weightSum="5"
+            android:background="@drawable/rectangle_stroke_edite"
+            android:layout_marginHorizontal="@dimen/_1sdp"
+            >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.8"
+                android:layout_gravity="center"
+                >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/f_timeline_image"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+
+
+            <EditText
+                android:id="@+id/f_timeline_edit"
+                android:layout_width="0dp"
+                android:layout_weight="4.1"
+                android:layout_height="@dimen/_30sdp"
+                android:hint="@string/write_post"
+                android:fontFamily="@font/flor"
+                android:padding="@dimen/_5sdp"
+                android:background="@android:color/transparent"
+                android:transitionName="trans"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:layout_gravity="center"
+                android:textSize="@dimen/_10sdp"
+                android:layoutDirection="ltr"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/f_timeline_textpeople"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/people_you_may_know"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:textStyle="bold"
+            android:padding="@dimen/_3sdp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:background="@color/white"
+            android:id="@+id/recycler_people_may_know"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="ltr"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/holoww"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:id="@+id/recycler_timeline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+
+            />
+
+
+    </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+        <ProgressBar
+            android:id="@+id/f_timeline_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/_2sdp"
+            style="?android:attr/progressBarStyleSmall"
+            />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </RelativeLayout>
+</FrameLayout>

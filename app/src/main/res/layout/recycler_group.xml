@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/r_group_layout"
+    >
+
+
+    <View
+        android:id="@+id/v_mdl"
+        android:layout_width="@dimen/_1sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_gravity="center"
+        android:background="@color/gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layoutDirection="ltr"
+        android:weightSum="2">
+
+        <View
+            android:id="@+id/v_2_1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_weight="1"
+            android:background="@color/gray"/>
+        <View
+            android:id="@+id/v_2_2"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_weight="1"
+            android:background="@color/gray"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="@dimen/_1sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_gravity="center"
+        android:background="@color/gray"/>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rectangle_stroke_transparent"
+        android:id="@+id/r_group_layout2"
+        android:layout_marginHorizontal="@dimen/_1sdp"
+        android:paddingVertical="@dimen/_3sdp"
+        >
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/r_group_image"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+
+            />
+
+        <TextView
+            android:id="@+id/r_group_name"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/app_name"
+            android:layout_gravity="center"
+            />
+
+
+
+    </LinearLayout>
+    <View
+
+        android:id="@+id/v_bottom"
+        android:layout_width="@dimen/_1sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_gravity="center"
+        android:background="@color/gray"
+
+        />
+
+
+</LinearLayout>

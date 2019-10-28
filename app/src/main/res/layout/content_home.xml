@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".HomeActivity"
+    tools:showIn="@layout/myhome"
+    android:fillViewport="true"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layoutDirection="ltr"
+    android:weightSum="5"
+    android:background="@color/colorPrimary"
+    >
+    <Button
+
+        android:id="@+id/home_menu_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/ic_menu"
+        android:paddingHorizontal="@dimen/_5sdp"
+        android:textSize="@dimen/_8sdp"
+        android:textAllCaps="false"
+        android:background="@android:color/transparent"
+        />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/home_tablayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:tabMode="fixed"
+        app:tabTextAppearance="@style/TabLayoutStyle"
+        app:tabTextColor="@color/white"
+        app:tabSelectedTextColor="@color/gray"
+        android:layoutDirection="ltr"
+        android:layout_weight="4.5"
+        app:tabMaxWidth="0dp"
+        app:tabGravity="fill"
+        />
+
+</LinearLayout>
+        <androidx.viewpager.widget.ViewPager
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:id="@+id/home_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

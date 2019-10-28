@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommentActivity"
+    android:orientation="vertical"
+    android:padding="@dimen/_2sdp"
+    >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_comments"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:nestedScrollingEnabled="false"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layoutDirection="ltr"
+        android:weightSum="3"
+        >
+        <EditText
+            android:id="@+id/comment_edit"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_weight="2.5"
+            android:background="@drawable/rectangle_stroke_edite"
+            android:layout_gravity="center"
+            android:hint="@string/your_comment"
+            android:fontFamily="@font/flor"
+            android:padding="@dimen/_4sdp"
+            android:textSize="@dimen/_10sdp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/comment_layout"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/rectangle2"
+            android:backgroundTint="@color/blue"
+            android:layout_gravity="center"
+            android:alpha="0.5"
+            android:layout_margin="@dimen/_3sdp"
+
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:src="@drawable/ic_send"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/_5sdp"
+
+                />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

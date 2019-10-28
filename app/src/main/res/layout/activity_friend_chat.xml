@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FriendChatActivity"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layoutDirection="ltr"
+        android:background="@color/blue"
+        android:padding="@dimen/_5sdp"
+        >
+
+        <ImageView
+            android:id="@+id/friend_chat_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back"
+            android:layout_gravity="center"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/friend_chat_image"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/ic_friend"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:id="@+id/friend_chat_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_chat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:nestedScrollingEnabled="false"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layoutDirection="ltr"
+        android:weightSum="3"
+        >
+        <EditText
+            android:id="@+id/friend_chat_edit"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_weight="2.6"
+            android:background="@drawable/rectangle_stroke_edite"
+            android:layout_gravity="center"
+            android:hint="@string/your_message"
+            android:fontFamily="@font/flor"
+            android:padding="@dimen/_4sdp"
+            android:textSize="@dimen/_10sdp"
+            android:imeOptions="flagNoExtractUi"
+            />
+
+        <RelativeLayout
+            android:id="@+id/friend_chat_layout"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.4"
+            android:background="@drawable/rectangle2"
+            android:layout_gravity="center"
+            android:alpha="0.5"
+
+
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:src="@drawable/ic_send"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/_5sdp"
+
+                />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
