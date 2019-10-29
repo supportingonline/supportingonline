@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -17,6 +18,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.egypt.supporting.supportingonline.Calls.ErrorCall;
+import com.egypt.supporting.supportingonline.Custom.CopyText;
 import com.egypt.supporting.supportingonline.Custom.MyRequest;
 import com.egypt.supporting.supportingonline.Custom.MySharedPref;
 import com.egypt.supporting.supportingonline.Custom.Myvollysinglton;
@@ -64,6 +66,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -105,7 +108,7 @@ public class LoginActivity extends AppCompatActivity {
         prog.setMessage(getResources().getString(R.string.loading));
 
         // key hash
-     DialogKeyHash();
+     //DialogKeyHash();
 
 
 
@@ -407,17 +410,26 @@ public class LoginActivity extends AppCompatActivity {
     private void DialogKeyHash(){ // Add code to print out the key hash
         try {
             PackageInfo info = getPackageManager().getPackageInfo(
-                    "com.ahmed.supporting.supportingonline",
+                    "com.egypt.supporting.supportingonline",
                     PackageManager.GET_SIGNATURES);
             for (Signature signature : info.signatures) {
                 MessageDigest md = MessageDigest.getInstance("SHA");
                 md.update(signature.toByteArray());
 
+                Log.i("kkkkk",Base64.encodeToString(md.digest(), Base64.DEFAULT));
+
                 AlertDialog.Builder d=new AlertDialog.Builder(this);
                 d.setMessage(Base64.encodeToString(md.digest(), Base64.DEFAULT));
+                d.setPositiveButton("copy", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        CopyText.copy(LoginActivity.this,Base64.encodeToString(md.digest(), Base64.DEFAULT));
+                    }
+                });
                 d.show();
             }
         } catch (PackageManager.NameNotFoundException e) {
+            Log.i("eeeeer", Objects.requireNonNull(e.getMessage()));
 
         } catch (NoSuchAlgorithmException e) {
 
