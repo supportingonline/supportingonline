@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:padding="@dimen/_5sdp"
     android:background="@drawable/rectangle_stroke_transparent"
+    android:backgroundTint="@color/white"
     >
 
     <TextView
