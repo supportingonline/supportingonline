@@ -1,17 +1,16 @@
 <resources>
-    <string name="app_name">supportingonline egypt</string>
+    <string name="app_name">supportingonline</string>
     <string name="title">SupportingOnline</string>
 
     <!--api-->
 
     <string name="domain" translatable="false">https://www.supportingonline.com/</string>
     <string name="socket" translatable="false">https://app-47fa2b09-17da-49a5-8b69-e6782bc98fb7.cleverapps.io/</string>
-    <string name="google_client_id_">584723212180-0o0a68kj6tia0vg42d9gfju8lc08959l.apps.googleusercontent.com</string>
     <string name="google_client_id">65830180157-2gbulaajaoi5fph05o8qpdahtdqnbqs7.apps.googleusercontent.com</string>
     <string name="twitter_consumer_key" translatable="false">fJZhFeZ16PXNVnfA0Hny4aiUO</string>
     <string name="twitter_consumer_secret" translatable="false">COW60lo9r29MqbgAHqwnSECHtCRgWsR0dXd0sAmldNyOLQ7uGH</string>
-    <string name="facebook_app_id" translatable="false">2328430343902835</string>
-    <string name="fb_login_protocol_scheme" translatable="false">fb2328430343902835</string>
+    <string name="facebook_app_id" translatable="false">2234539033309162</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb2234539033309162</string>
 
     <!--titles-->
 

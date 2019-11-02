@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.egypt.supporting.supportingonline.Calls.ErrorCall;
@@ -83,6 +84,8 @@ public class LoginActivity extends AppCompatActivity {
     private LoginButton loginfacebook;
     private static final String EMAIL = "email";
 
+    private ImageView imageView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,7 +111,15 @@ public class LoginActivity extends AppCompatActivity {
         prog.setMessage(getResources().getString(R.string.loading));
 
         // key hash
-     //DialogKeyHash();
+
+        imageView=(ImageView)findViewById(R.id.image_login);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
 
 
 
@@ -407,32 +418,5 @@ public class LoginActivity extends AppCompatActivity {
         finish();
     }
 
-    private void DialogKeyHash(){ // Add code to print out the key hash
-        try {
-            PackageInfo info = getPackageManager().getPackageInfo(
-                    "com.egypt.supporting.supportingonline",
-                    PackageManager.GET_SIGNATURES);
-            for (Signature signature : info.signatures) {
-                MessageDigest md = MessageDigest.getInstance("SHA");
-                md.update(signature.toByteArray());
 
-                Log.i("kkkkk",Base64.encodeToString(md.digest(), Base64.DEFAULT));
-
-                AlertDialog.Builder d=new AlertDialog.Builder(this);
-                d.setMessage(Base64.encodeToString(md.digest(), Base64.DEFAULT));
-                d.setPositiveButton("copy", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        CopyText.copy(LoginActivity.this,Base64.encodeToString(md.digest(), Base64.DEFAULT));
-                    }
-                });
-                d.show();
-            }
-        } catch (PackageManager.NameNotFoundException e) {
-            Log.i("eeeeer", Objects.requireNonNull(e.getMessage()));
-
-        } catch (NoSuchAlgorithmException e) {
-
-        }
-    }
 }
