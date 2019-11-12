@@ -7,8 +7,8 @@ android {
         applicationId "com.egypt.supporting.supportingonline"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 23
-        versionName "2.2.5"
+        versionCode 25
+        versionName "2.2.7"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
