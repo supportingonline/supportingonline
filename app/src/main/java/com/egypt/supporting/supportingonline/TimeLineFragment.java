@@ -3,7 +3,6 @@ package com.egypt.supporting.supportingonline;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.core.widget.NestedScrollView;
@@ -14,12 +13,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -34,7 +30,7 @@ import com.egypt.supporting.supportingonline.Custom.MySizes;
 import com.egypt.supporting.supportingonline.Custom.Myvollysinglton;
 import com.egypt.supporting.supportingonline.Custom.OnErrorRequest;
 import com.egypt.supporting.supportingonline.Custom.SpaceRecycler_V;
-import com.egypt.supporting.supportingonline.Dialogs.DialogShare;
+import com.egypt.supporting.supportingonline.Dialogs.DialogShareBottomSheet;
 import com.egypt.supporting.supportingonline.Models.PeopleYouMayKnowModel;
 import com.egypt.supporting.supportingonline.Models.PostModel;
 import com.android.volley.AuthFailureError;
@@ -297,22 +293,17 @@ public class TimeLineFragment extends Fragment {
 
     private void openshare(String id, String text,String image,String type) {
 
-        DialogShare dialog=new DialogShare(getActivity(),text,image,type, new OnPressView() {
-            @Override
-            public void onclick(View view) {
-                share(id);
 
-            }
-        });
-        Window window = dialog.getWindow();
-        WindowManager.LayoutParams wlp = window.getAttributes();
 
-        wlp.gravity = Gravity.BOTTOM;
-        window.setAttributes(wlp);
-
-        dialog.getWindow().getAttributes().windowAnimations=R.style.dialogshareanimation;
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-        dialog.show();
+        DialogShareBottomSheet addPhotoBottomDialogFragment =
+                new DialogShareBottomSheet(new OnPressView() {
+                    @Override
+                    public void onclick(View view) {
+                        share(id);
+                    }
+                },getActivity(),text,type,image);
+        assert getFragmentManager() != null;
+        addPhotoBottomDialogFragment.show(getFragmentManager(),"");
     }
 
     private void share(String id){

@@ -10,12 +10,9 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -28,7 +25,7 @@ import com.egypt.supporting.supportingonline.Custom.MySizes;
 import com.egypt.supporting.supportingonline.Custom.Myvollysinglton;
 import com.egypt.supporting.supportingonline.Custom.OnErrorRequest;
 import com.egypt.supporting.supportingonline.Custom.SpaceRecycler_V;
-import com.egypt.supporting.supportingonline.Dialogs.DialogShare;
+import com.egypt.supporting.supportingonline.Dialogs.DialogShareBottomSheet;
 import com.egypt.supporting.supportingonline.Models.PostModel;
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -304,21 +301,17 @@ public class PostsFragment extends Fragment {
 
     private void openshare(String id, String text,String image,String type) {
 
-        DialogShare dialog=new DialogShare(getActivity(),text,image,type, new OnPressView() {
-            @Override
-            public void onclick(View view) {
-                share(id);
 
-            }
-        });
-        Window window = dialog.getWindow();
-        WindowManager.LayoutParams wlp = window.getAttributes();
 
-        wlp.gravity = Gravity.BOTTOM;
-        window.setAttributes(wlp);
-
-        dialog.getWindow().getAttributes().windowAnimations=R.style.dialogshareanimation;
-        dialog.show();
+        DialogShareBottomSheet addPhotoBottomDialogFragment =
+                new DialogShareBottomSheet(new OnPressView() {
+                    @Override
+                    public void onclick(View view) {
+                        share(id);
+                    }
+                },getActivity(),text,type,image);
+        assert getFragmentManager() != null;
+        addPhotoBottomDialogFragment.show(getFragmentManager(),"");
     }
 
     private void share(String id){

@@ -1,12 +1,11 @@
 package com.egypt.supporting.supportingonline.Dialogs;
 
-import android.annotation.SuppressLint;
-import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.Html;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -14,44 +13,50 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
+import com.bumptech.glide.Glide;
 import com.egypt.supporting.supportingonline.Calls.OnPressView;
+
 import com.egypt.supporting.supportingonline.Custom.URLImageParser;
 import com.egypt.supporting.supportingonline.R;
-import com.bumptech.glide.Glide;
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import org.xml.sax.XMLReader;
 
-public class DialogShare  extends Dialog {
+public class DialogShareBottomSheet extends BottomSheetDialogFragment {
 
     private OnPressView onpress;
     private Context context;
     private String text,type,image;
 
-    public DialogShare(@NonNull Context context,String text,String image,String type, OnPressView onpress) {
-        super(context);
+    public DialogShareBottomSheet(OnPressView onpress, Context context, String text, String type, String image) {
         this.onpress = onpress;
-        this.context=context;
-        this.text=text;
-        this.type=type;
-        this.image=image;
+        this.context = context;
+        this.text = text;
+        this.type = type;
+        this.image = image;
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.diaolg_share, container, false);
     }
 
     private TextView textView;
     private RelativeLayout share;
     private ImageView imageView;
 
-    @SuppressLint("SetTextI18n")
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.diaolg_share);
-        getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
-        textView=(TextView)findViewById(R.id.d_share_text);
-        imageView=(ImageView) findViewById(R.id.d_share_image);
+
+        textView=(TextView)view.findViewById(R.id.d_share_text);
+        imageView=(ImageView)view.findViewById(R.id.d_share_image);
         imageView.setVisibility(View.GONE);
-        share=(RelativeLayout)findViewById(R.id.d_share_share);
+        share=(RelativeLayout)view.findViewById(R.id.d_share_share);
 
         Log.i("type",type);
 

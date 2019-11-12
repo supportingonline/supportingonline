@@ -340,7 +340,7 @@ public class SupportingMainFragment extends Fragment {
 
                         // success code
                         MySharedPref.setdata(getActivity(),"wallet",s);
-                        textwallet.setText(getActivity().getResources().getString(R.string.fees_wallet)+"     "+ConfirmMoneyToLocal.transform(getActivity(),s));
+                        textwallet.setText(view.getContext().getResources().getString(R.string.fees_wallet)+"     "+ConfirmMoneyToLocal.transform(view.getContext(),s));
                         Toast.makeText(getActivity(), textwallet.getText(), Toast.LENGTH_SHORT).show();
                         ecode.setText("");
                         btn_code.setAlpha(0.5f);
